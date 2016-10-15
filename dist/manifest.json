@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "cueb.io",
+  "description": "Contextual browsing",
+  "version": "1.1",
+
+  "icons": {
+    "16": "./resource/logo.png",
+    "48": "./resource/logo.png",
+    "128": "./resource/logo.png"
+  },
+
+  "permissions": [
+    "https://cueb.io/api/v1/*",
+    "storage",
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": "./resource/logo.png"
+  },
+
+  "background": {
+    "scripts": ["./resource/background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": [ "./resource/content_script.css" ],
+      "js": [ "./resource/content.js" ],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
+
+  "web_accessible_resources": [
+    "firstinstall.html",
+    "iframe.html",
+    "resource/logo.png"
+  ]
+}

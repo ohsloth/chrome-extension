@@ -1,0 +1,39 @@
+{
+  "name": "cueb-chrome-extension",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --colors -d --watch --config ./webpack/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-loader": "^1.1.0",
+    "babel-core": "^4.4.3",
+    "babel-loader": "^4.0.0",
+    "css-loader": "^0.9.1",
+    "extract-text-webpack-plugin": "^0.3.8",
+    "file-loader": "^0.8.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "api-client": "git+https://moomou@bitbucket.org/cueb/api-client.git",
+    "data-form": "git+https://moomou@bitbucket.org/cueb/data-form.git",
+    "es6-promise": "^2.3.0",
+    "isomorphic-fetch": "^2.1.1",
+    "lodash": "^4.2.1",
+    "normalize": "^0.3.1",
+    "normalize.css": "^3.0.3",
+    "omnibox": "git+https://moomou@bitbucket.org/cueb/omnibox.git",
+    "react": "^15.0.x",
+    "react-dom": "^15.0.x",
+    "react-draggable": "^2.0.0",
+    "rx-dom": "git://github.com/Reactive-Extensions/RxJS-DOM.git#4af2f443bfd5619fb1e9caad0ffd686e921cc935",
+    "schema": "git+https://moomou@bitbucket.org/cueb/schema.git"
+  }
+}

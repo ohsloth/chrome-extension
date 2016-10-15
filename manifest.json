@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "cueb.io",
+  "description": "Contextual browsing with friends",
+  "version": "0.1",
+
+  "icons": {
+    "128": "./img/logo.png"
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": "./img/logo.png"
+  },
+
+  "background": {
+    "scripts": ["./build/background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": [ "./css/content_script.css" ],
+      "js": [ "./build/content.js" ],
+      "all_frames": false,
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    "firstinstall.html",
+    "iframe.html",
+    "resource/*"
+  ]
+}

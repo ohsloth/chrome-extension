@@ -1,0 +1,42 @@
+.km-hover-highlight, .km-select-highlight {
+  position: relative;
+}
+
+.km-hover-highlight:before, .km-select-highlight:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  border: 1px solid orange;
+}
+
+.km-select-highlight:before {
+  border: 1px solid red;
+}
+
+.cueb-extension {
+  height: 100vh !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 450px !important;
+  z-index: 999999999999 !important;
+}
+
+.cueb-extension[hidden="true"], .cueb-extension-stickers-container[hidden="true"] {
+  display: none !important;
+}
+
+.cueb-extension-stickers-container {
+  z-index: 999999999999 !important;
+  position: absolute;
+}
+
+.cueb-noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+}
